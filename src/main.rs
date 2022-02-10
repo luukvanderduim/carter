@@ -55,7 +55,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     // Convert children in a list of proxies
     let app_text_proxies =
-        ratspie::get_proxies::<TextProxy>(registry.connection(), &app_list).await?;
+        ratspie::get_proxies::<TextProxy>(registry.connection(), app_list).await?;
 
     let mut txt_proxies_streams: Vec<PropertyStream<i32>> = Vec::new();
 

@@ -559,7 +559,7 @@ dependencies = [
 [[package]]
 name = "ratspie"
 version = "0.1.0"
-source = "git+https://github.com/luukvanderduim/ratspie.git#174c1da140ecdd93ea268733293455f316788749"
+source = "git+https://github.com/luukvanderduim/ratspie.git#05f05c7f6b23524ffbe0a63a08a8e58c71eb1383"
 dependencies = [
  "zbus",
  "zbus_names",
