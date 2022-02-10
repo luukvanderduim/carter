@@ -1,7 +1,6 @@
 #![allow(unused_imports)]
 use std::{error::Error, ops::Deref};
 
-use async_std::prelude::*;
 use futures_concurrency::prelude::*;
 use futures_lite::{stream, StreamExt};
 use ratspie::{a11y_bus_connection, proxies::text::TextProxy, registry::EventListenerRegistered};
@@ -13,7 +12,7 @@ use zbus::{
 };
 use zvariant::OwnedObjectPath;
 
-#[async_std::main]
+#[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     // Get a connection on the a11y bus.
     let a11y_bus = ratspie::a11y_bus_connection().await?;
