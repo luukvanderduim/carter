@@ -1,0 +1,40 @@
+// DBusProxy::new(&a11y_bus)?.request_name(
+//     "org.a11y-testers.Carter".try_into().unwrap(),
+//     ReplaceExisting.into(),
+// )?;
+
+// // Signal apps that we would like them to signal a11y events.
+// // Courteous apps have subscribed to the accessibility is_enabled property(?)
+// ratspie::set_session_accessibility_status(true).await?;
+
+// // Get a proxy to the Registry service
+// let registry = ratspie::registry::RegistryProxy::new(&a11y_bus).await?;
+
+// let mut event_array = registry.get_registered_events().await?;
+
+// if registry
+//     .register_event("object:text-caret-moved")
+//     .await
+//     .is_ok()
+// {
+//     event_array = registry.get_registered_events().await?;
+// }
+
+// for ev in event_array {
+//     println!("registered event: {:?}", ev);
+// }
+// let root_accessible = registry_root::AccessibleProxy::new(&a11y_bus).await?;
+
+// // let children = registry_root.get_children()?;
+// // let mut text_proxies: Vec<TextProxyBlocking> = Vec::new();
+// // for (name, path) in children {
+// //     // println!("name: {} --- path: {:?}", &name, &path);
+
+// //     let bus_name = BusName::try_from(name)?;
+// //     let pb: zbus::blocking::ProxyBuilder<'_, TextProxyBlocking> = ProxyBuilder::new(&a11y_bus)
+// //         .destination(bus_name)?
+// //         .path(path)?
+// //         .cache_properties(CacheProperties::Lazily);
+// //     let p = pb.build()?;
+// //     text_proxies.push(p);
+// // }

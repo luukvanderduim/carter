@@ -1,0 +1,20 @@
+[package]
+name = "carter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ratspie = { path = "../ratspie" }
+#zbus = { version = "2.1.1", default-features = false, features = ["tokio"] }
+zbus = { version = "2.1.1"  }
+zbus_names = "2.1.0"
+zvariant = "3.1.2"
+#tokio = { version = "1.16.1", features = ["full"] }
+async-std = {version = "1.9.0", features = ["attributes"]}
+tokio-stream = "0.1.8"
+serde = "1.0.136"
+byteorder = "1.4.3"
+futures-concurrency = "2.0.0"
+futures-lite = "1.12.0"
